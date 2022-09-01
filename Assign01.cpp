@@ -7,7 +7,7 @@ CS431-Principles of Programming Languages
 
 using namespace std; 
 
-int INTDIV(int numer, int denom, int quot, int remndr);
+void INTDIV(int N, int D, int Q, int R);
 
 
 int main(int argc, char **argv){
@@ -15,17 +15,19 @@ int main(int argc, char **argv){
     int N,D,R,Q;
     cout << " Enter two positive integers to divide: ";
     cin >> N >> D;
-    INTDIV(N,D,Q,R);
+    INTDIV(N,D,Q, R);
     
+
+    cout << N << '\n' << D << '\n' << Q << '\n' << R << endl;
     return 0;
 }
-int INTDIV(int numer, int denom, int quot, int remndr){
-    quot = 0;
-    while(numer >= denom){
-        numer =numer-denom;
-        quot = quot+1;
+void INTDIV(int N, int D, int Q, int R){
+     Q = 0;
+    while(N >= D){
+        N -= D;
+        Q += 1;       
     }
-    remndr = numer;
-    return numer, denom, quot, remndr;
-
+    
+    R = N;
+    return;
 }
