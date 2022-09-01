@@ -17,12 +17,11 @@ int main(int argc, char **argv){
         N -= D;
         Q += 1;       
     }    
-    R = N;
-    
+    R = N;    
 
     cout << "Numerator: " << N << '\n'; 
     cout << "Denominator: "<< D << '\n';
-    cout <<  "Quotient: " << Q << '\n';
+    cout << "Quotient: " << Q << '\n';
     cout << "Remainder: " << R << '\n';
     return 0;
 }
