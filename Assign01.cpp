@@ -1,6 +1,9 @@
 /*
 Ryan Horan
 CS431-Principles of Programming Languages
+September 2022
+
+Integer Division to show how global variables can rot
 
 */
 #include <iostream>
