@@ -15,6 +15,7 @@ int main(int argc, char **argv){
     int N,D,R,Q;
     cout << " Enter two positive integers to divide: ";
     cin >> N >> D;
+    
     Q = 0;
     while(N >= D){
         N -= D;
