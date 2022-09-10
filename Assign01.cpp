@@ -19,9 +19,9 @@ int main(int argc, char **argv){
     }    
     R = N;    
 
-    cout << "Numerator: " << N << '\n'; 
-    cout << "Denominator: "<< D << '\n';
-    cout << "Quotient: " << Q << '\n';
-    cout << "Remainder: " << R << '\n';
+    cout << "Numerator: " << N << '\n'
+         << "Denominator: "<< D << '\n'
+         << "Quotient: " << Q << '\n'
+         << "Remainder: " << R << '\n';
     return 0;
 }
