@@ -28,6 +28,7 @@ void INTDIV(){
 }
 
 int main(int argc, char **argv){
+    
     //Get two integers from user   
     cout << " Enter two positive integers to divide: ";
     cin >> N >> D;
