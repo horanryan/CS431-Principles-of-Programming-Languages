@@ -10,17 +10,24 @@ Integer Division to show how global variables can rot
 
 using namespace std; 
 
-int main(int argc, char **argv){
-    //Get two integers from user
-    int N,D,R,Q;
-    cout << " Enter two positive integers to divide: ";
-    cin >> N >> D;
+//Global Variables
+int N,D,R,Q;
+
+void INTDIV(){
     Q = 0;
     while(N >= D){
         N -= D;
         Q += 1;       
     }    
     R = N;    
+}
+
+int main(int argc, char **argv){
+    //Get two integers from user   
+    cout << " Enter two positive integers to divide: ";
+    cin >> N >> D;
+    INTDIV();
+    
 
     cout << "Numerator: " << N << '\n'
          << "Denominator: "<< D << '\n'
