@@ -28,15 +28,21 @@ void INTDIV(){
 }
 
 int main(int argc, char **argv){
+    //Variable for copy of Numerator
+    int cN;
     
     //Get two integers from user   
-    cout << " Enter two positive integers to divide: ";
-    cin >> N >> D;
+    cout << "Enter a positive integer for the numerator: ";
+    cin >> N;
+    cout << "Enter a postive integer for the denominator: ";
+    cin >> D;
+    cN = N;
     INTDIV();    
 
     cout << "Numerator: " << N << '\n'
          << "Denominator: "<< D << '\n'
          << "Quotient: " << Q << '\n'
-         << "Remainder: " << R << '\n';
+         << "Remainder: " << R << '\n'
+         << "Original Numerator: " << cN << '\n';
     return 0;
 }
