@@ -9,8 +9,30 @@ September 2022
 
 using namespace std;
 
-void concentric(char* charArray, int k){
-    
+void concentric(char* charArray, int k, int index){
+    //modified code from https://www.geeksforgeeks.org/print-concentric-rectangular-pattern-in-a-2d-matrix/
+    int i;
+    if( index < 1)
+        return;
+    for( i = k; i > index; i--)
+        cout << charArray[i-1]<< ' ';
+    for( i = 1; i < 2*index-1; i++)
+        cout << charArray[index-1] << ' ';
+    for( i = index; i <=k; i++)
+        cout << charArray[i-1]<< ' ';
+    cout <<'\n';
+    //recursive call
+    concentric(charArray,k,index-1);
+    if( index < 1)
+        return;
+    for( i = k; i > index; i--)
+        cout << charArray[i-1]<< ' ';
+    for( i = 1; i < 2*index-1; i++)
+        cout << charArray[index-1] << ' ';
+    for( i = index; i <=k; i++)
+        cout << charArray[i-1]<< ' ';
+    cout <<'\n';
+    return;
 
 }
 int main(int argc, char ** argv){
@@ -27,7 +49,7 @@ int main(int argc, char ** argv){
     // convert string into array of chars
     strcpy(charArray, userInput.c_str());
 
-    concentric(charArray, k);
+    concentric(charArray, k, k);
 
     return 0;
 }
