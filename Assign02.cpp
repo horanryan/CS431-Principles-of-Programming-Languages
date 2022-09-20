@@ -1,9 +1,15 @@
 /*
 Ryan Horan
 CS431-Principles of Programming Languages
-September 2022
+September 13 2022
+
+Due: October 7th, 2022
+
+language: c++ (Ubuntu 11.2.0-19ubuntu1) 11.2.0
+compiler: g++ (Ubuntu 11.2.0-19ubuntu1) 11.2.0
 
 Operationalize a sort function based on flow chart
+
 
 */
 #include <iostream>
