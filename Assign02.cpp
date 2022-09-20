@@ -5,7 +5,7 @@ September 13 2022
 
 Due: October 7th, 2022
 
-language: c++ (Ubuntu 11.2.0-19ubuntu1) 11.2.0
+language: c++ 17
 compiler: g++ (Ubuntu 11.2.0-19ubuntu1) 11.2.0
 
 Operationalize a sort function based on flow chart
