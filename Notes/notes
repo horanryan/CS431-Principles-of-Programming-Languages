@@ -1,3 +1,4 @@
 Local variables- a variable accessible only in the function in which it was created.
 global variable - a variable accessible in an environment other than the one in which it was created.
 
+three ways to implement reference parameters
