@@ -114,7 +114,7 @@ int main(int argc, char ** argv){
     List* listDNF = new List();            // DNF - D NOT FOUND
 
     ifstream file;                   
-    file.open("dtext.txt");            // insert your file name here
+    file.open(argv[1]);            
     if (!file.is_open()){                 // if the file could not be opened just end the program with error
 
         cout<<"file couldn't be opened!"<<endl;
