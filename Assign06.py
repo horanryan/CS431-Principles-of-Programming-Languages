@@ -7,11 +7,11 @@ for i in range(30):
     if n == -1:
         break    
     array.append(n)
-    print("\nNumber of entries:\t",len(array),
+print("\nNumber of entries:\t",len(array),
           "\nMin value:\t",min(array),
           "\nMax value:\t",max(array),
           "\nRange:\t",min(array)," - ",max(array),
           "\nArithmetic Mean:\t",statistics.mean(array),
-          "\nVariance:\t",statistics.variance(array),
-          "\nStd. Deviation:\t",statistics.stdev(array)
+          "\nVariance:\t",statistics.pvariance(array),
+          "\nStd. Deviation:\t",statistics.pstdev(array)
           )
