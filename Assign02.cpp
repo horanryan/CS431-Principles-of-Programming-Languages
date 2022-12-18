@@ -21,7 +21,9 @@ using namespace std;
 void sort();
 void move();
 int Findkay(int);
-int a[5];
+
+
+int a[15];
 int n = sizeof(a)/sizeof(a[0]);
 
 int main(void){
@@ -37,7 +39,7 @@ int main(void){
 
     return 0;
 }
-
+//Global variable
 int j = 0;
 
 void sort(){   
@@ -46,9 +48,11 @@ void sort(){
             move();
         }
     }
-    return;
+
 }
+//Global variable
 int k = 0;
+
 void move(){
    int temp = a[j+1];
    a[j+1]= a[j];
@@ -57,6 +61,7 @@ void move(){
 
     return;
 }
+
 int Findkay(int temp){
     k = j;
     int sw = 0;
