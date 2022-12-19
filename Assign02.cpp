@@ -13,47 +13,65 @@ Operationalize a sort function based on flow chart
 
 */
 #include <iostream>
+#include <ctime>
+#include <stdlib.h>
 
 using namespace std;
 
-void sort(int n, int a[]){
-   
-    for(int j=1; j<=n-1; j++){
+void sort();
+void move();
+int Findkay(int);
+
+
+int a[15];
+int n = sizeof(a)/sizeof(a[0]);
+
+int main(void){
+    srand(time(NULL));    
+    for (int i= 0;i < n; i++){
+        a[i] = rand() % n;
+    }
+    sort();
+    for(int i = 0; i < n; i++){
+        cout << a[i] << " ";
+    }
+    
+
+    return 0;
+}
+//Global variable
+int j = 0;
+
+void sort(){   
+    for(int j= 0; j<=n-1; j++){
         if(a[j]>a[j+1]){
-            move(a,j);
+            move();
         }
     }
-    return;
+
 }
-void move(int a[],int j){
+//Global variable
+int k = 0;
+
+void move(){
    int temp = a[j+1];
    a[j+1]= a[j];
-   int k;
-   Findkay(k,j,a,temp);
+   Findkay(temp);
    a[k]= temp;
 
     return;
 }
-void Findkay(int k, int j, int a[],int temp){
+
+int Findkay(int temp){
     k = j;
     int sw = 0;
-    while( (k>1) && (sw = 0)){
+    while( (k>0) && (sw == 0)){
         if(a[k-1]>temp){
             a[k]=a[k-1];
             k= k-1;
         }
         else
             sw = 1;
-
     }
-    return;
-}
-int main( int argc, char **argv){
-    int n;
-    cout << "Enter size of array: " << endl;
-    cin >> n;
-    int a[n];//int array size of n;
-    
     return 0;
 }
-
