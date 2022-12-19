@@ -10,68 +10,65 @@ compiler: g++ (Ubuntu 11.2.0-19ubuntu1) 11.2.0
 
 Operationalize a sort function based on flow chart
 
-
 */
+
+
 #include <iostream>
-#include <ctime>
 #include <stdlib.h>
+#include <ctime> 
 
 using namespace std;
 
-void sort();
-void move();
+
+void sort(); 
+void move(); 
 int Findkay(int);
 
 
-int a[15];
+int a[10];
 int n = sizeof(a)/sizeof(a[0]);
 
 int main(void){
-    srand(time(NULL));    
-    for (int i= 0;i < n; i++){
+    srand(time(NULL));
+    for(int i = 0; i < n; i++){ 
         a[i] = rand() % n;
+        cout << a[i] << " "; 
     }
-    sort();
+    cout << '\n';
+    sort();     
     for(int i = 0; i < n; i++){
         cout << a[i] << " ";
     }
-    
 
     return 0;
 }
-//Global variable
-int j = 0;
 
-void sort(){   
-    for(int j= 0; j<=n-1; j++){
-        if(a[j]>a[j+1]){
+int j = 0;
+void sort(){
+    for(j = 0; j < n-1; j++){
+        if(a[j] > a[j+1]){
             move();
         }
     }
-
 }
-//Global variable
-int k = 0;
-
+int k = 0; 
 void move(){
-   int temp = a[j+1];
-   a[j+1]= a[j];
-   Findkay(temp);
-   a[k]= temp;
-
-    return;
+    int temp = a[j+1];
+    a[j+1] = a[j];
+    Findkay(temp); 
+    a[k] = temp; 
 }
 
 int Findkay(int temp){
-    k = j;
-    int sw = 0;
-    while( (k>0) && (sw == 0)){
-        if(a[k-1]>temp){
-            a[k]=a[k-1];
-            k= k-1;
+    int sw = 0; 
+    k = j; 
+    while(k > 0 && sw == 0){
+        if(a[k-1] > temp){
+            a[k] = a[k-1];
+            k = k - 1; 
         }
-        else
-            sw = 1;
+        else        
+            sw = 1;         
     }
-    return 0;
+    return 0; 
 }
